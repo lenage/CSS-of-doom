@@ -1,10 +1,10 @@
 (function(){
-  if (!document.getElementById('css-of-doom')){
-    var objHead = document.getElementsByTagName('head'); 
-    var objCSS = objHead[0].appendChild(document.createElement('link')); 
-    objCSS.id = 'css-of-doom'; 
-    objCSS.rel = 'stylesheet'; 
-    objCSS.href = 'https://raw.github.com/midday/CSS-of-doom/master/doom.css'; 
-    objCSS.type = 'text/css';    
-  }
- })()
+  var head = document.getElementsByTagName('head')[0];
+  var style = document.createElement('style'),
+  var rules = document.createTextNode('*::selection { background: transparent!important;   } *::-moz-selection { background: transparent!important; } * { cursor: wait!important; ');
+  style.type = 'text/css';
+  if(style.styleSheet)
+    style.styleSheet.cssText = rules.nodeValue;
+  else style.appendChild(rules);
+    head.appendChild(style);
+})()
