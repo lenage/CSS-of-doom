@@ -1,3 +1,3 @@
 *::selection { background: transparent!important;   }
 *::-moz-selection { background: transparent!important; }
-* { cursor: wait!important; }
+* { cursor: none!important; }
