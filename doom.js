@@ -6,4 +6,5 @@
     objCSS.rel = 'stylesheet'; 
     objCSS.href = 'https://raw.github.com/midday/CSS-of-doom/master/doom.css'; 
     objCSS.type = 'text/css';    
+  }
  })()
